@@ -1,0 +1,122 @@
+-= Welcome to TextWorld, ALFRED! =-
+
+You are in the middle of a room. Looking quickly around you, you see a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 1, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sidetable 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+
+Your task is to: put a hot mug in cabinet.
+
+LLM Think: In order to put a hot mug in cabinet, I need to first find a mug, then heat it, and finally place it inside a cabinet. I can see multiple objects and locations in the current scene. I should first locate where a mug is likely to be found. For this, I will use ConceptNet.
+For using conceptNet, I have 2 functions to use. ConceptSearch would be used when I need more information, ConceptRelate would be used when I need to search ConceptNet for a particular relation. For this case, I do not need to search all the information, but only a few relations that could be used to find the candidate location of 'tomato', so i would use ConceptRelate('mug','AtLocation')
+
+ConceptRelate('mug','AtLocation').
+
+ConceptNet: 'mug', 'AtLocation':
+Fetching ConceptNet data for concept: 'mug' ...
+🔹 Relation: AtLocation
+Edges: ['bar', 'cabinet', 'cupboard', 'store']
+
+LLM Think: I see that a mug can be located in cabinet that is present in the scene objects, so I will first explore cabinets one by one.
+
+Your command: go to cabinet 1
+
+Observation: You arrive at cabinet 1. On cabinet 1, you see apple 1.
+
+LLM Think: I can see that cabinet 1 only holds and apple. So I will keep exploring the other cabinets.
+
+Your command: go to cabinet 2
+
+Observation: You arrive at cabinet 2. On cabinet 2, you see fork 1, spoon 1, spoon 3, and banana 1.
+
+LLM Think: In my current scene objects in cabinet 2, I still can not see my target object mug, so I will quickly explore the remaining cabinets.
+
+Your command: go to cabinet 3
+
+Observation: You arrive at cabinet 3. On cabinet 3, you see nothing.
+
+LLM Think: I dont see any objects over here, but I am still left with a last cabinet, so heading towards that.
+
+Your command: go to cabinet 4
+
+Observation: You arrive at cabinet 4. Cabinet 4 is closed.
+
+LLM Think: I can see that cabinet 4 is currently closed. I need to first open this to see what is inside.
+
+Your command: open cabinet 4
+
+Observation: You opened cabinet 4. On cabinet 4, you see nothing.
+
+LLM Think: I have explored all the cabinets but have not found the mug. Now I will need to explore other receptacles in the current scene until I find the mug. The next candidate location I can explore can be the countertop, but before going there, I need to validate from ConceptNet if it actually can hold mugs and related objects. So I will be using the conceptnet.
+For using conceptNet, I have 2 functions to use. ConceptSearch would be used when I need more information, ConceptRelate would be used when I need to search ConceptNet for a particular relation. For this case, I do not need to search all the information, but only a few relations that could be used to see what this countertop is capable of. so i would use ConceptRelate('countertop','UsedFor')
+
+🔹 Relation: UsedFor 
+Edges (0): []
+
+LLM Think: I see no data for the countertop what it can be used for. But It is still a strong candidate since it was related to the cupboards, and cabinets. So I will explore this before exploring the drawers. 
+
+Your command: go to countertop 1
+
+Observation: You arrive at countertop 1. On the countertop 1, you see a bowl 2, a bread 2, a bread 1, a cup 3, a dishsponge 3, a dishsponge 2, a dishsponge 1, a houseplant 1, a knife 1, a lettuce 2, a mug 2, a mug 1, a peppershaker 3, a peppershaker 2, a potato 1, a saltshaker 1, a spatula 1, a spoon 3, a spoon 2, and a winebottle 1.
+
+LLM Think: I can see a mug here, so I will quickly pick it up.
+
+Your command: take mug 1 from countertop 1
+
+Observation: You pick up the mug 1 from the countertop 1.
+
+LLM Think: Now I have picked up the mug. The next sub goal is to heat this. And for that, I need to use a receptacle that is capable to heat this up. I can see a microwave in the current scene that can be used for this, but I need to validate my perception from the ConceptNet.
+For using conceptNet, I have 2 functions to use. ConceptSearch would be used when I need more information, ConceptRelate would be used when I need to search ConceptNet for a particular relation. For this case, I do not need to search all the information, but only a few relations that could be used to find what a microwave is capable of, so i would use ConceptSearch('microwave')
+
+🔹 Relation: AtLocation  
+Edges (2): ['apartment', 'kitchen']
+
+🔹 Relation: CapableOf  
+Edges (4): ['dry most liquids', 'heat food', 'warm cup of milk', 'warm up coffee']
+
+🔹 Relation: DerivedFrom  
+Edges (1): ['wave']
+
+🔹 Relation: ExternalURL  
+Edges (4): ['Microwave', 'microwave', 'MicrowaveRadiation', 'Q127995']
+
+🔹 Relation: IsA  
+Edges (2): ['appliance', 'n']
+
+🔹 Relation: Synonym  
+Edges (1): ['microwave']
+
+🔹 Relation: UsedFor  
+Edges (3): ['cooking food fast', 'make popcorn', 'preparing food']
+
+LLM Think: I can see that microwave is capable to heat food, so I will quickly go to the microwave and heat this tomato.
+
+Your command: go to microwave 1
+
+Observation: You arrive at microwave 1. The microwave 1 is closed.
+
+LLM Think: The microwave is closed, I need to open it.
+
+Your command: open microwave 1
+
+Observation: You open the microwave 1. The microwave 1 is open. In it, you see nothing.
+
+LLM Think: Now I will directly use this to heat the mug.
+
+Your command: heat mug 1 with microwave 1
+
+Observation: You heat the mug 1 using the microwave 1.
+
+LLM Think: Now I have a hot mug. The final step is to place it in a cabinet.
+
+Your command: go to cabinet 1
+Observation: You arrive at cabinet 1. The cabinet 1 is closed.
+
+LLM Think: The cabinet is closed, so I need to open it.
+
+Your command: open cabinet 1
+
+Observation: You open the cabinet 1. The cabinet 1 is open. In it, you see a plate 2, and a plate 1.
+
+LLM Think: Now I will place the mug inside the cabinet.
+
+Your command: move mug 1 to cabinet 1
+
+You Won!

@@ -1,0 +1,32 @@
+Observation:
+ -= Welcome to TextWorld, ALFRED! =-
+
+You are in the middle of a room. Looking quickly around you, you see a coffeetable 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a sinkbasin 1, a sinkbasin 2, and a garbagecan 1.
+
+Your task is to: put soap bar in garbagecan.
+LLM Think: In order to put soap bar in/on garbagecan, i need to first search for the soap bar. I can see multiple objects and locations in the current scene. I need to see most likely location of soap bar
+I need to use my internal knowledge for the best candidate location of the soapbar.
+
+LLM Think: As per my internal knowledge, sinkbasin is the strong candidate for the required object. I think I should go there first.
+
+Your command: go to sinkbasin 1
+
+Observation:
+You arrive at sinkbasin 1. On the sinkbasin 1, you see a spoon 1, and a soap bar 4.
+LLM Think: Oh I found a soap bar: soap bar 4. Now I sould pick it up. 
+
+Your command: take soap bar 4 from sinkbasin 1
+
+Observation:
+You pick up the soap bar 4 from the sinkbasin 1.
+LLM Think: Okay now I have soap bar, I need to put this in to garbagecan. I should first go to the garbagecan.
+
+Your command: go to garbagecan 1
+
+Observation:
+You arrive at garbagecan 1. In the garbagecan 1, you see nothing.
+LLM Think: I have garbagecan in just front of me, I need to put this soap bar into the garbagecan.
+
+Observation:
+You move the soap bar 4 to the garbagecan 1. 
+🎉 You won!

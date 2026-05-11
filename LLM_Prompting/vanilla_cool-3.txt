@@ -1,0 +1,57 @@
+-= Welcome to TextWorld, ALFRED! =-
+
+You are in the middle of a room. Looking quickly around you, you see a cabinet 21, a cabinet 20, a cabinet 19, a cabinet 18, a cabinet 17, a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+
+Your task is to: cool some apple and put it in microwave.
+
+LLM Think: Since the goal is to cool the apple and put it in the microwave, I first need to find the apple. and for that, I need to use my internal knowledge for candidate locations. 
+
+LLM Think: From the ConceptNet results, the fridge appears to be a strong candidate location for food items like apples. Since a fridge exists in the scene, I will explore it first.
+
+Your Command: go to fridge 1
+
+Observation: You arrive at fridge 1. The fridge 1 is closed.
+
+LLM Think: The fridge is closed. To see what is inside, I need to open it first.
+
+Your Command: open fridge 1
+
+Observation: You open the fridge 1. The fridge 1 is open. In it, you see a bowl 1, and a mug 1.
+
+LLM Think: The apple is not inside the fridge. I should continue exploring nearby locations where food items are often placed. I can see a diningtable in current scene. I can check if it can hold the apples. 
+
+Your Command: go to diningtable 1
+
+Observation: You arrive at diningtable 1. On the diningtable 1, you see a apple 1, a cup 2, a cup 1, a egg 1, a mug 3, a potato 1, a soapbottle 1, a spatula 2, a spatula 1, a spoon 2, and a spoon 1.
+
+LLM Think: I have found the apple on the dining table. I will pick it up so I can cool it.
+
+Your Command: take apple 1 from diningtable 1
+
+Observation: You pick up the apple 1 from the diningtable 1.
+
+LLM Think: Now that I have the apple, I need to cool it. To cool this apple, I need to see the receptacle from current scene that can be used to cool. I can see a fridge that is capable to cool as per my knowledge, so I will go there.
+
+Your Command: go to fridge 1
+
+Observation: You arrive at fridge 1. The fridge 1 is open. In it, you see a bowl 1, and a mug 1.
+
+LLM Think: The fridge is already open, so I can directly cool the apple using it.
+
+Your Command: cool apple 1 with fridge 1
+
+Observation: You cool the apple 1 using the fridge 1.
+
+LLM Think: The apple has been successfully cooled. Now I need to move it into the microwave to complete the task. For that, I need to first go to the microwave.
+
+Your Command: go to microwave 1
+
+Observation: You arrive at microwave 1. The microwave 1 is open. In it, you see nothing.
+
+LLM Think: I have arrived to the microwave and I can see that it is already open and empty, so I can now place the cooled apple inside it.
+
+Your Command: move apple 1 to microwave 1
+
+Observation: You move the apple 1 to the microwave 1.
+
+You won!

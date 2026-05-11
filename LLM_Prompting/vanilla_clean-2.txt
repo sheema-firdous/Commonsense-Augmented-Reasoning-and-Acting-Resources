@@ -1,0 +1,79 @@
+-= Welcome to TextWorld, ALFRED! =-
+You are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a shelf 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, a towelholder 2, and a towelholder 1.
+Your task is to: clean some cloth and put it in bathtubbasin.
+
+LLM Think: In order to clean some cloth and put it in bathtubbasin, I need to first find the cloth. I can see multiple objects and locations in the current scene. I need to find the most likely location of cloth, and for that, I need to use my internal knowledge for candidate locations. 
+
+Your command: go to cabinet 1
+
+Observation:
+You arrive at cabinet 1. The cabinet 1 is closed.
+
+LLM Think: Oh I see this is closed, in order to see what's inside, I need to first open it.
+Your command: open cabinet 1
+
+Observation:
+You open the cabinet 1. The cabinet 1 is open. In it, you see a spraybottle 2.
+
+LLM Think: Although I can see a spraybottle here, but this is not the target object, so I need to explore the other locations now. 
+Your command: go to cabinet 2
+
+Observation:
+You arrive at cabinet 2. The cabinet 2 is closed.
+
+LLM Think: Oh I see this is closed, in order to see what's inside, I need to first open it. This is similar to what I did with cabinet 1, so I will open cabinet 2 to explore its contents.
+Your command: open cabinet 2
+
+Observation:
+You open the cabinet 2. The cabinet 2 is open. In it, you see a soapbottle 2.
+
+LLM Think: Although I can see a soapbottle here, but this is not the target object, so I need to explore the other locations now. I will close the cabinet and go to the next location. Since I have already explored cabinet 1 and cabinet 2, my next location to explore would be cabinet 3, to see if I can find the cloth there.
+
+Your command: go to cabinet 3
+
+Observation:
+You arrive at cabinet 3. The cabinet 3 is closed.
+
+LLM Think: Oh I see this is closed, in order to see what's inside, I need to first open it. This is similar to what I did with cabinet 1 and cabinet 2, so I will open cabinet 3 to explore its contents.
+
+Your command: open cabinet 3
+
+Observation:
+You open the cabinet 3. The cabinet 3 is open. In it, you see a toiletpaper 2.
+
+LLM Think: Although I can see a toiletpaper here, but this is not the target object, so I need to explore the other locations now. I will close the cabinet and go to the next location. Since I have already explored cabinet 1, cabinet 2, and cabinet 3, my next location to explore would be cabinet 4, to see if I can find the cloth there. 
+
+Your command: go to cabinet 4
+
+Observation:
+You arrive at cabinet 4. The cabinet 4 is closed.
+
+LLM Think: Oh I see this is closed, in order to see what's inside, I need to first open it. This is similar to what I did with cabinet 1, cabinet 2, and cabinet 3, so I will open cabinet 4 to explore its contents.
+
+Your command: open cabinet 4
+
+Observation:
+You open the cabinet 4. The cabinet 4 is open. In it, you see handtowel 1, handtowel 2, cloth 1, and box2.
+
+LLM Think: I have opened cabinet 4 and found handtowels and cloths. Althouth handtowel and cloth can be considered as synonyms, but I am not allowd to used synonym objects, and need to go for exactly same object. So I would take cloth 1
+
+Your command: take cloth 1 from cabinet 4
+
+Observation:
+You take cloth 1 from cabinet 4.
+
+LLM Think: I have now picked the cloth, and my next goal is to clean it. I am not sure which receptacles are used for cleaning. I need to check which objects or receptacles can clean this.
+
+Your command: go to sinkbasin 1
+
+Observation:
+You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.
+
+LLM Think: I have arrived at sinkbasin 1 and I see nothing on it. I can use the sinkbasin 1 to clean the cloth 1. I will clean the handtowel 1 with sinkbasin 1.
+Your command: clean cloth 1 with sinkbasin 1
+
+Observation:
+You clean cloth 1 with sinkbasin 1.
+
+You Won!
+

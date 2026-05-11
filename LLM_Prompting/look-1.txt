@@ -1,0 +1,43 @@
+-= Welcome to TextWorld, ALFRED! =
+You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 2,
+a drawer 1, a garbagecan 1, a shelf 1, and a sidetable 1.
+
+Your task is to: examine the bowl with the desklamp.
+
+LLM Think: In order to examine the bowl with the desklamp, i need to first search for the bowl. I can see multiple objects and locations in the current scene. I need to see most likely location of bowl, and for that, I need to search bowl on ConceptNet.
+For using conceptNet, I have 2 functions to use. ConceptSearch would be used when I need more information, ConceptRelate would be used when I need to search ConceptNet for a particular relation. For this case, I do not need to search all the information, but only a few relations that could be used to find the candidate location of 'bowl', so i would use ConceptRelate('bowl','AtLocation')
+
+ConceptNet: 'bowl', 'AtLocation': 
+Fetching ConceptNet data for concept: 'bowl' ...
+🔹 Relation: AtLocation
+ Edges
+(12): [’the cupboard’, ’a spoon’, ’a grape’, ’an apartment’, ’a table’, ’a restaurant’, ’the sink’, ’a re
+frigerator’, ’the cubboard’, ’a dishwasher’, ’food’, ’a cabinet’]
+
+LLM Think: I have retrieved the ConceptNet relation data to find the location of ’bowl’. By mapping
+the data edges with the scene objects, I can see ’a table’, ’a cabinet’, and ’a cubboard’ can be mapped
+to sidetable 1, desk 1, drawer 1, drawer 2 and a shelf 1. I will now explore these candidate locations
+one after the other until i find the bowl.
+
+Your command: go to sidetable 1
+
+Observation: You arrive at sidetable 1. On sidetable 1, you see a bowl 1, plate 2, and desklamp 2.
+
+LLM Think: I have arrived at sidetable 1. I can directly see bowl 1 here. I need to grab this
+so that I can examine under desklamp.
+
+Your command: take bowl 1 from sidetable 1
+
+Observation: You pick up the bowl 1 from the sidetable 1.
+
+LLM Think: I have picked up the bowl 1 that was the first step to accomplish this task. Now I need
+to fnd the desklamp to examine this bowl. In current scene, I can see a desklamp 1, so I do not need to
+explore the further locations to look for the desklamp. I will now directly go to examine the bowl with this desklamp. I will need to use desklamp.
+
+Your command: use desklamp 2
+
+Observation: You turn on the desklamp 2.
+
+LLM Think: I have successfully examined the bowl with the desklamp.
+
+You won!

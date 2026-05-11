@@ -1,0 +1,121 @@
+-= Welcome to TextWorld, ALFRED! =-
+
+You are in the middle of a room. Looking quickly around you, you see a cabinet 16, a cabinet 15, a cabinet 14, a cabinet 13, a cabinet 12, a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a safe 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+
+Your task is to: put a cool slice of apple in diningtable.
+
+LLM Think: Since the goal is to put a cool slice of apple in the diningtable, I first need to find the apple. I have no idea of where to find the apple, to find the candidate locations, I will use conceptnet.
+For using conceptNet, I have 2 functions to use. ConceptSearch would be used when I need more information, ConceptRelate would be used when I need to search ConceptNet for a particular relation. For this case, I do not need to search all the information, but only a few relations that could be used to find the candidate location of 'apple', so i would use ConceptRelate('apple','AtLocation')
+
+ConceptNet: 'apple', 'AtLocation': 
+Fetching ConceptNet data for concept: 'apple' ...
+🔹 Relation: AtLocation
+Edges (7): ['apple orchard', 'apple pie', 'apple tree', 'fridge', 'greengrocer', 'grocery store', "horses mouth"]
+
+LLM Think: I have fetched the conceptnet data for apple's location and can see that the fridge in current scene is the strong candidate, so i will explore that first.
+
+Your Command: go to fridge 1
+
+Observation: You arrive at fridge 1. The fridge 1 is closed.
+
+Your Command: open fridge 1
+
+Observation: You open the fridge 1. The fridge 1 is open. In it, you see a plate 1, and a potato 1.
+
+LLM Think: The apple is not in the fridge. I will check other likely food locations. I can see countertops and diningtables are the main locations that might hold an apple. However, I also see sinkbasin that can clean the food, but will start from countertops.
+
+Your Command: go to countertop 1
+
+Observation: You arrive at countertop 1. On the countertop 1, you see a potato 2.
+
+LLM Think: Oh, I can not find apple on countertop 1, I still have another countertop, I will be exploring that now.
+
+Your Command: go to countertop 2
+
+Observation: You arrive at countertop 2. On the countertop 2, you see a apple 1, a bread 1, a butterknife 3, a butterknife 1, a dishsponge 1, a egg 1, a lettuce 2, a mug 1, a pan 2, a papertowelroll 1, a pot 1, a spatula 1, and a spoon 2.
+
+LLM Think: I have found the apple on countertop 2. I need to pick it up to proceed.
+
+Your Command: take apple 1 from countertop 2
+
+Observation: You pick up the apple 1 from the countertop 2.
+
+LLM Think: Now I have picked up the apple, the next goal is to slice the apple, for that I need to find and use the suitable object that is capable to slice. I can see a butterknife in the current scene that can potentially slice, but to re confirm, I will use conceptnet of what this is capable of. 
+For using conceptNet, I have 2 functions to use. ConceptSearch would be used when I need more information, ConceptRelate would be used when I need to search ConceptNet for a particular relation. For this case, I do not need to search all the information, but only a few relations that could be used to find the capability of 'butterknife', so i would use ConceptRelate('butterknife','UsedFor')
+
+ConceptNet: 'butterknife', 'UsedFor': 
+Fetching ConceptNet data for concept: 'butterknife' ...
+🔹 Relation: UsedFor
+Edges (0): []
+
+LLM Think: Oh, I see that there is no data returned from conceptnet for butterknife. I will use a generic term to search again. 
+
+ConceptNet: 'knife', 'UsedFor': 
+Fetching ConceptNet data for concept: 'butterknife' ...
+🔹 Relation: UsedFor
+Edges (0): ['alter length of string or rope', 'attaching to rifle', 'attacking enemy', 'boning', 'breaking', 'breaking down into pieces', 'butchering']
+🔹 Relation: CapableOf
+['butter bread', 'butter bred', 'butter piece of toast', 'cut', 'cut apple', 'cut cake', 'cut cheese']
+
+LLM Think: Yess, I can see that knife is capable to 'cut'. So I will simply use it to slice the apple. For that, I need to first hold this butterknife. But currently, I am holding the apple. Since agent is capable to only hold a single object at a time, so I will first move the apple to countertop.
+
+Your Command: move apple 1 to countertop 2
+
+Observation: You moved apple 1 to countertop 2
+
+LLM Think: I can now quickly take the butterknife.
+
+Your Command: take butterknife 3 from countertop 2
+
+Observation: You take the butterknife 3 from countertop 2.
+
+LLM Think: Yess, I can now simply slice this apple with butterknife 3.
+
+Your Command: slice apple 1 with butterknife 1
+
+Observation: You slice the apple 1 with butterknife 1
+
+LLM Think: I have successfully sliced the apple, now the next task is to cool this sliced apple. For that, I need to first take this sliced apple. But currently, I am holding the butterknife. Since agent is capable to only hold a single object at a time, so I will first move the butterknife to countertop.
+
+Your Command: move butterknife 3 to countertop 2
+
+Observation: You moved butterknife 3 to countertop 2
+
+LLM Think: Yess, Now I can quickly take the sliced apple.
+
+Your Command: take apple 1 from countertop 2
+
+Observation: You take apple 1 from countertop 2
+
+LLM Think: Since I am currently holding the sliced apple, and I want to cool this as per my next goal, I need to see which of the current scene's receptacles are capable to cool. 
+
+although I can see a fridge in the current scene, I will again use conceptnet to quickly confirm if it is capable to cool.
+
+ConceptNet: 'fridge', 'CapableOf': 
+Fetching ConceptNet data for concept: 'cool' ...
+🔹 Relation: CapableOf
+Edges (7): ['cool food"]
+
+LLM Think: I see that fridge can be used to cool the food, so I will quickly go to the fridge.
+
+Your Command: go to fridge 1
+
+Observation: You arrive at fridge 1. The fridge 1 is open. In it, you see a bowl 2, a bread 3, a egg 1, a mug 2, and a plate 1.
+
+LLM Think: Now I will cool the apple with fridge, using cool command.
+
+Your Command: cool apple 1 with fridge 1
+
+Observation: You cool the apple 1 using the fridge 1.
+
+LLM Think: Oh, I have successfully cooled the sliced apple. The last part of my goal is to put this sliced cool apple to the diningtable. Now I need to quickly go to diningtable countertop to move this apple, as part of my last goal of this task.
+
+Your Command: go to diningtable 1
+
+Observation: You arrive at diningtable 1. On the diningtable 1, you see a bread 2, a butterknife 2, a fork 2, a fork 1, a knife 3, a knife 1, a lettuce 2, a potato 1, a saltshaker 3, a soapbottle 3, a tomato 3, a tomato 2, and a tomato 1.
+
+LLM Think: I am facing diningtable 1, I can quickly move the apple over here to complete my task.
+
+Your Command: move apple 1 to diningtable 1
+
+You won!

@@ -1,0 +1,119 @@
+-= Welcome to TextWorld, ALFRED! =-
+
+You are in the middle of a room. Looking quickly around you, you see a armchair 2, a armchair 1, a diningtable 1, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a ottoman 1, a sidetable 3, a sidetable 2, a sidetable 1, and a sofa 1.
+
+Your task is to: examine the box with the desklamp.
+
+LLM Think: In order to examine the box with the desklamp, I need to first search for the box. I can see multiple objects and locations in the current scene. I need to see the most likely location of the box, and for that, I need to use my internal knowledge of where to start searching for this box.
+
+Your command: go to dresser 1
+
+Observation: You arrive at dresser 1. On the dresser 1, you see a television 1.
+
+LLM Think: I have arrived at dresser 1, but I did not find the box. The dresser 1 has a television 1 on it. Since my goal is to examine the box with the desklamp, I need to continue searching for the box. According to the ConceptNet relation data, another possible location for the box could be the drawers. I will now explore the drawers one after the other until I find the box. I will start with drawer 1.
+Your command: go to drawer 1
+
+Observation: You arrive at drawer 1. The drawer 1 is closed.
+
+LLM Think: I have arrived at drawer 1, but it is closed. To search for the box inside the drawer, I need to open it first. I will open the drawer 1 to see if the box is inside.
+
+Your command: open drawer 1
+
+Observation: You open the drawer 1. The drawer 1 is open. In it, you see nothing.
+
+LLM Think: I have opened the drawer 1, but it is empty. Since my goal is to examine the box with the desklamp, I need to continue searching for the box. According to the ConceptNet relation data, another possible location for the box could be the other drawers. I will now explore the other drawers one after the other until I find the box. I will move on to drawer 2.
+
+Your command: go to drawer 2
+
+Observation: You arrive at drawer 2. The drawer 2 is closed.
+
+LLM Think: I have arrived at drawer 2, but it is closed. To search for the box inside the drawer, I need to open it first. I will open the drawer 2 to see if the box is inside.
+
+Your command: open drawer 2
+
+Observation: You open the drawer 2. The drawer 2 is open. In it, you see a watch 1.
+
+LLM Think: I have opened the drawer 2, but I did not find the box. Instead, I found a watch 1. Since my goal is to examine the box with the desklamp, I need to continue searching for the box. According to the ConceptNet relation data, another possible location for the box could be the other drawers. I will now explore the other drawers one after the other until I find the box. I will move on to drawer 3.
+
+Your command: go to drawer 3
+
+Observation: You arrive at drawer 3. The drawer 3 is closed.
+
+LLM Think: I have arrived at drawer 3, but it is closed. To search for the box inside the drawer, I need to open it first. I will open the drawer 3 to see if the box is inside.
+
+Your command: open drawer 3
+
+Observation: You open the drawer 3. The drawer 3 is open. In it, you see nothing.
+
+LLM Think: I have opened the drawer 3, but it is empty. Since my goal is to examine the box with the desklamp, I need to continue searching for the box. According to the ConceptNet relation data, another possible location for the box could be the other drawers. I will now explore the other drawers one after the other until I find the box. I will move on to drawer 4.
+
+Your command: go to drawer 4
+
+Observation: You arrive at drawer 4. The drawer 4 is closed.
+
+LLM Think: I have arrived at drawer 4, but it is closed. To search for the box inside the drawer, I need to open it first. I will open the drawer 4 to see if the box is inside.
+
+Your command: open drawer 4
+
+Observation: You open the drawer 4. The drawer 4 is open. In it, you see a creditcard 2.
+
+LLM Think: I have opened the drawer 4, but I did not find the box. Instead, I found a creditcard 2. Since my goal is to examine the box with the desklamp, I need to continue searching for the box. According to the ConceptNet relation data, another possible location for the box could be the sidetables. I will now explore the sidetables one after the other until I find the box. I will start with sidetable 1.
+Your command: go to sidetable 1
+
+Observation: You arrive at sidetable 1. On the sidetable 1, you see a statue 1.
+
+LLM Think: I have arrived at sidetable 1, but I did not find the box. Instead, I found a statue 1. Since my goal is to examine the box with the desklamp, I need to continue searching for the box. According to the ConceptNet relation data, another possible location for the box could be the other sidetables. I will now explore the other sidetables one after the other until I find the box. I will move on to sidetable 2.
+
+Your command: go to sidetable 2
+
+Observation: You arrive at sidetable 2. On the sidetable 2, you see a creditcard 3, a statue 2, and a watch 2.
+
+LLM Think: I have arrived at sidetable 2, but I did not find the box. Instead, I found a creditcard 3, a statue 2, and a watch 2. Since my goal is to examine the box with the desklamp, I need to continue searching for the box. According to the ConceptNet relation data, another possible location for the box could be the other sidetables. I will now explore the other sidetables one after the other until I find the box. I will move on to sidetable 3.
+
+Your command: go to sidetable 3
+
+You arrive at sidetable 3. On the sidetable 3, you see a desklamp 1, and a houseplant 1.
+
+LLM Think: I have arrived at sidetable 3, and I see a desklamp 1, but I still haven't found the box. Since my goal is to examine the box with the desklamp, I need to continue searching for the box. However, I have already explored the drawers and the sidetables, and I haven't found the box yet. 
+
+Your command: go to sofa 1
+
+Observation: You arrive at sofa 1. On the sofa 1, you see a creditcard 1, a laptop 1, a pillow 1, and a remotecontrol 1.
+
+LLM Think: I have arrived at sofa 1, but I did not find the box. Instead, I found a creditcard 1, a laptop 1, a pillow 1, and a remotecontrol 1. Since my goal is to examine the box with the desklamp, I need to continue searching for the box. I will now explore the armchairs to see if the box is under or behind them. I will start with armchair 1.
+
+Your command: go to armchair 1
+
+Observation: You arrive at armchair 1. On the armchair 1, you see nothing.
+
+LLM Think: I have arrived at armchair 1, but I did not find the box. Since my goal is to examine the box with the desklamp, I need to continue searching for the box. I will now explore the other armchair to see if the box is under or behind it. I will move on to armchair 2.
+
+Your command: go to armchair 2
+
+Observation: You arrive at armchair 2. On the armchair 2, you see a remotecontrol 2.
+
+LLM Think: I have arrived at armchair 2, but I did not find the box. Instead, I found a remotecontrol 2. Since my goal is to examine the box with the desklamp, I need to continue searching for the box. I have already explored the drawers, sidetables, sofa, and armchairs, and I haven't found the box yet. I will now think of other possible locations that are not listed in the ConceptNet relation data. One possible location is under the diningtable 1, as the box could potentially be placed under it. I will go to the diningtable 1 to check if the box is there.
+
+Your command: go to diningtable 1
+
+Observation: You arrive at diningtable 1. On the diningtable 1, you see a box 1, a laptop 2, and a statue 3.
+
+LLM Think: I have arrived at diningtable 1 and I see a box 1, which is the object I was searching for. Now that I have found the box, I need to examine it with the desklamp. I previously found a desklamp 1 on sidetable 3. I will take the box and go to the sidetable 3 to examine it with the desklamp.
+
+Your command: take box 1 from diningtable 1
+
+Observation: You pick up the box 1 from the diningtable 1.
+
+LLM Think: I have picked up the box 1 from the diningtable 1. Now, I need to go to the sidetable 3 where I previously found the desklamp 1, so I can examine the box with the desklamp.
+
+Your command: go to sidetable 3
+
+Observation: You arrive at sidetable 3. On the sidetable 3, you see a desklamp 1, and a houseplant 1.
+
+LLM Think: I have arrived at sidetable 3 with the box 1 in my hand. Now, I need to examine the box with the desklamp 1. To do this, I will use the desklamp 1 to shine light on the box 1.
+
+Your command: use desklamp 1
+
+Observation: You turn on the desklamp 1.
+
+You Won!

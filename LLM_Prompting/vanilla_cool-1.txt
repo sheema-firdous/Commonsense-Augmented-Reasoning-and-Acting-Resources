@@ -1,0 +1,64 @@
+-= Welcome to TextWorld, ALFRED! =-
+
+You are in the middle of a room. Looking quickly around you, you see a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+
+Your task is to: cool some apple and put it in countertop.
+
+LLM Think: Since the goal is to cool the apple and put it in countertop. For this, I first need to find the apple, and for that, I need to use my internal knowledge for candidate locations. 
+
+Your Command: go to fridge 1
+
+Observation: You arrive at fridge 1. The fridge 1 is closed.
+
+LLM Think: Although, I am facing the fridge, but it is currently closed. To see what is inside, i need to open it first.
+
+Your Command: open fridge 1
+
+Observation: You open the fridge 1. The fridge 1 is open. In it, you see a bowl 2, a bread 3, a egg 1, a mug 2, and a plate 1.
+
+LLM Think: Oh, I can't find the apple here. It means, I need to explore the further locations from the current scene but there is no other edge from conceptnet data that can be mapped directly to these objects/ receptacles. So, I can start by exploring the nearby locations. I have sinkbasin, microwave, and cabinets. First two receptacles are used to clean and heat, I might find the apple there. let me go to sinkbasin first.
+
+Your Command: go to sinkbasin 1
+
+Observation: You arrive at sinkbasin 1. On the sinkbasin 1, you see a butterknife 1.
+
+LLM Think: Still no apple, the next location will be microwave, that is used for heating the food, I might see apple there.
+
+Your Command: go to microwave 1
+
+Observation: You arrive at microwave 1. The microwave 1 is closed.
+LLM Think: I can see the microwave is currently closed, I will first open this.
+
+Your Command: open microwave 1
+
+Observation: You open the microwave 1. The microwave 1 is open. In it, you see a apple 1.
+
+LLM Think: Oh finally, I have found the apple. Now I will take this first so that it can bee cooled as the next step.
+
+Your Command: take apple 1 from microwave 1
+
+Observation: You pick up the apple 1 from the microwave 1.
+
+LLM Think: I have picked up apple, now I need to cool this, and to know which objects/ receptacles are capable to cool, and for that, I need to use my internal knowledge. 
+
+Your Command: go to fridge 1
+
+Observation: You arrive at fridge 1. The fridge 1 is open. In it, you see a bowl 2, a bread 3, a egg 1, a mug 2, and a plate 1.
+
+LLM Think: Now I will cool the apple with fridge, suing cool command.
+
+Your Command: cool apple 1 with fridge 1
+
+Observation: You cool the apple 1 using the fridge 1.
+
+LLM Think: Oh, I have successfully cooled the apple. Now I need to go to countertop to move this apple, as part of my last goal of this task.
+
+Your Command: go to countertop 1
+
+Observation: You arrive at countertop 1. On the countertop 1, you see a bread 2, a butterknife 2, a fork 2, a fork 1, a knife 3, a knife 1, a lettuce 2, a potato 1, a saltshaker 3, a soapbottle 3, a tomato 3, a tomato 2, and a tomato 1.
+
+LLM Think: I am facing countertop 1, I can quickly move the apple over here to complete my task.
+
+Your Command: move apple 1 to countertop 1
+
+You won!

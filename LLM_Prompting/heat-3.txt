@@ -1,0 +1,111 @@
+-= Welcome to TextWorld, ALFRED! =-
+
+You are in the middle of a room. Looking quickly around you, you see a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 2, a diningtable 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+
+Your task is to: put a hot apple in diningtable.
+
+LLM Think: To complete the task, I need to first find an apple, then heat it, and finally place it on a dining table. I can see multiple objects and locations in the current scene. I need to see most likely location of apple, and for that, I need to search apple on ConceptNet.
+For using conceptNet, I have 2 functions to use. ConceptSearch would be used when I need more information, ConceptRelate would be used when I need to search ConceptNet for a particular relation. For this case, I do not need to search all the information, but only a few relations that could be used to find the candidate location of 'tomato', so i would use ConceptRelate('apple','AtLocation')
+
+ConceptRelate('apple','AtLocation').
+
+ConceptNet: 'apple', 'AtLocation':
+Edges: ['apple orchard', 'apple pie', 'apple tree', 'fridge', 'greengrocer', 'grocery store', 'house', 'orchard', 'produce section of supermarket', 'refrigerator']
+
+LLM Think: By considering the conceptnet data and mapping the edges to the scene objects, I can see fridge 1, in the current scene that is a strong candidate location for an apple, so I will explore it first.
+
+Your command: go to fridge 1
+
+Observation: You arrive at fridge 1. The fridge 1 is closed.
+
+LLM Think: The fridge is closed, so I need to open it first to see what is inside.
+
+Your command: open fridge 1
+
+Observation: You open the fridge 1. In it, you see a bowl 1, a cup 1, a egg 1, a lettuce 1, a plate 1, and a tomato 1.
+
+LLM Think: Ahh, I have opened the fridge 1, but unfortunately there is no apple in the fridge. So now, I would explore the other locations to find the apple. I see some receptacles that can potentially hold the apples, for example, diningtable. But I would first confirm from ConceptNet if it is actually capable of holding such items.
+For using conceptNet, I have 2 functions to use. ConceptSearch would be used when I need more information, ConceptRelate would be used when I need to search ConceptNet for a particular relation. For this case, need to check the properties of what diningtable can hold, so i would use ConceptSearch('dining table')
+
+🔹 Relation: AtLocation  
+Edges (3): ['cafeteria', 'formal dining room', 'house']
+
+🔹 Relation: ExternalURL  
+Edges (1): ['dining table']
+
+🔹 Relation: HasProperty  
+Edges (1): ['paired with chairs']
+
+🔹 Relation: IsA  
+Edges (1): ['indoor object']
+
+🔹 Relation: UsedFor  
+Edges (16): ['arranging papers', 'dining', 'discussions', 'doing homework', 'doing jigsaw puzzles on', 'drinking on', 'eat dinner', 'eat dinner on', 'eat dinnner', 'eating dinner', 'eating dinner on', 'eating food', 'eating meal', 'entertain guests']
+
+LLM Think: I can see that diningtable can be used for eating food and dining and apple is also a food, so I would first explore this before the other receptacles.
+
+Your command: go to diningtable 1
+
+Observation: You arrive at diningtable 1. On it, you see bread, a butterknife, a dishsponge, a fork, a potato, and a spatula.
+
+LLM Think: Although I could not find an apple on this dining table but I still have another one, so I would quickly explore the dining table 2, before exxploring the other receptacles. 
+
+Your command: go to diningtable 2
+
+Observation: You arrive at diningtable 2. On it, you see an apple 1, bread 3, a cup 3, an egg 3, banana 3, and fork 1.
+
+LLM Think: Oh yess, I found the apple here. Now I will quickly pick this up so that I can go for the next sub goal. 
+
+Your command: take apple 1 from diningtable 2
+
+Observation: You pick up the apple 1 fromdiningtable 2.
+
+LLM Think: Now I have the apple with me, I would now need to heat this apple. The next sub goal is to heat this. And for that, I need to use a receptacle that is capable to heat this up. I can see a microwave in the current scene that can be used for this, but I need to validate my perception from the ConceptNet.
+For using conceptNet, I have 2 functions to use. ConceptSearch would be used when I need more information, ConceptRelate would be used when I need to search ConceptNet for a particular relation. For this case, I do not need to search all the information, but only a few relations that could be used to find what a microwave is capable of, so i would use ConceptSearch('microwave')
+
+🔹 Relation: AtLocation  
+Edges (2): ['apartment', 'kitchen']
+
+🔹 Relation: CapableOf  
+Edges (4): ['dry most liquids', 'heat food', 'warm cup of milk', 'warm up coffee']
+
+🔹 Relation: DerivedFrom  
+Edges (1): ['wave']
+
+🔹 Relation: ExternalURL  
+Edges (4): ['Microwave', 'microwave', 'MicrowaveRadiation', 'Q127995']
+
+🔹 Relation: IsA  
+Edges (2): ['appliance', 'n']
+
+🔹 Relation: Synonym  
+Edges (1): ['microwave']
+
+🔹 Relation: UsedFor  
+Edges (3): ['cooking food fast', 'make popcorn', 'preparing food']
+
+LLM Think: I can see that microwave is capable to heat food, so I will quickly go to the microwave and heat this apple.
+
+Your command: go to microwave 1
+
+Observation: You arrive at microwave 1. The microwave is open.
+
+LLM Think: I have arrived at microwave 1, and it is currently open. So, I can directly heat this apple with the microwave. 
+
+Your command: heat apple 1 with microwave 1
+
+Observation: You heat the apple 1 using the microwave 1.
+
+LLM Think: Oh yess, now I have successfully heated the apple. The final step is to place it on a dining table, and for that I will quickly go to any of the dining table from the scene receptacles. 
+
+Your command: go to diningtable 1
+
+Observation: You arrive at diningtable 1.
+
+LLM Think: I have arrived at diningtable 1, and to accomplish my goal, I can quickly place this hot apple to this dining table. 
+
+Your command: move apple 1 to diningtable 1
+
+Observation: You move the apple 1 to the diningtable 1.
+
+You Won!

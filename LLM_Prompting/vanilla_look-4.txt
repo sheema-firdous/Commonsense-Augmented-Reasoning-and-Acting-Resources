@@ -1,0 +1,28 @@
+-= Welcome to TextWorld, ALFRED! =-
+
+You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, a garbagecan 1, a shelf 5, a shelf 4, a shelf 3, a shelf 2, and a shelf 1.
+
+Your task is to: examine the keychain with the desklamp.
+
+LLM Think: In order to examine the keychain with the desklamp, I need to first search for the keychain. I can see multiple objects and locations in the current scene. I need to see the most likely location of the keychain, and for that, i will use my internal knowledge to see the candidate locations for this keychain.
+
+Your command: go to dresser 1
+
+Observation: 
+You arrive at dresser 1. On the dresser 1, you see a cd 3, a cellphone 1, a desklamp 1, a keychain 3, a pencil 3, and a pencil 2.
+
+LLM Think: I have arrived at dresser 1 and I see a keychain 3, which is one of the objects I was searching for. I also see a desklamp 1, which is the other object I need to examine the keychain with. Since I have found both objects, I can now examine the keychain with the desklamp. I will start by taking the keychain 3 from the dresser 1.
+
+Your command: take keychain 3 from dresser 1
+
+Observation: 
+You pick up the keychain 3 from the dresser 1.
+
+LLM Think: I have picked up the keychain 3 from the dresser 1. Now that I have the keychain, I need to examine it with the desklamp. I also see a desklamp 1 on the dresser 1. I will use the desklamp 1 to shine light on the keychain 3.
+
+Your command: use desklamp 1
+
+Observation: 
+You turn on the desklamp 1.
+
+You Won!

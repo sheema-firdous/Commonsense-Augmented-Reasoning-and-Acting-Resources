@@ -1,0 +1,77 @@
+-= Welcome to TextWorld, ALFRED! =-
+
+You are in the middle of a room. Looking quickly around you, you see a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a drawer 13, a drawer 12, a drawer 11, a drawer 10, a drawer 9, a drawer 8, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 6, a stoveburner 5, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+
+Your task is to: cool some apple and put it in garbagecan.
+
+LLM Think: Since the goal is to cool the apple and put it in the garbagecan, I first need to find the apple. and for that, I need to use my internal knowledge for candidate locations. 
+
+Your Command: go to fridge 1
+
+Observation: You arrive at fridge 1. The fridge 1 is closed.
+
+LLM Think: The fridge is closed. To see what is inside, I need to open it first.
+
+Your Command: open fridge 1
+
+Observation: You open the fridge 1. The fridge 1 is open. In it, you see a egg 2, a plate 2, a potato 2, and a tomato 1.
+
+LLM Think: I cannot find the apple inside the fridge. I should continue exploring other possible locations nearby. Food items might also appear near preparation areas such as the sinkbasin or microwave.
+
+Your Command: go to sinkbasin 1
+
+Observation: You arrive at sinkbasin 1. On the sinkbasin 1, you see a cup 2, a mug 1, a spatula 2, and a tomato 2.
+
+LLM Think: The apple is not here either. Another nearby appliance is the microwave. I will check there next.
+
+Your Command: go to microwave 1
+
+Observation: You arrive at microwave 1. The microwave 1 is closed.
+
+LLM Think: The microwave is closed. I should open it to inspect its contents.
+
+Your Command: open microwave 1
+
+Observation: You open the microwave 1. The microwave 1 is open. In it, you see a egg 1.
+
+LLM Think: There is still no apple here. I still have some locations in the current scene that can potentially hold the apples. I have countertops, cabinets, drawers. I can start from countertops since these are common locations where food items are placed, so I will explore them next.
+
+Your Command: go to countertop 1
+
+Observation: You arrive at countertop 1. On the countertop 1, you see a bread 2, a egg 3, a fork 1, a knife 1, a lettuce 1, a pan 2, a pan 1, a plate 1, a pot 3, a spoon 1, a window 3, and a window 1.
+
+LLM Think: The apple is not here either. There is another countertop in the room, so I will check that one as well.
+
+Your Command: go to countertop 2
+
+Observation: You arrive at countertop 2. On the countertop 2, you see a apple 1, a bowl 1, a bread 1, a cellphone 3, a ladle 3, a peppershaker 1, a pot 2, a potato 1, a soapbottle 2, and a spoon 2.
+
+LLM Think: I have found the apple on countertop 2. I will pick it up so I can cool it.
+
+Your Command: take apple 1 from countertop 2
+
+Observation: You pick up the apple 1 from the countertop 2.
+
+LLM Think: Now I need to cool the apple. A fridge is typically capable of cooling food items. Since the fridge is already present in the environment, I will go there.
+
+Your Command: go to fridge 1
+
+Observation: You arrive at fridge 1. The fridge 1 is open. In it, you see a egg 2, a plate 2, a potato 2, and a tomato 1.
+
+LLM Think: I will now cool the apple using the fridge.
+
+Your Command: cool apple 1 with fridge 1
+
+Observation: You cool the apple 1 using the fridge 1.
+
+LLM Think: The apple has been successfully cooled. The final step is to place it in the garbagecan. For that, I need to first go to the garbagecan.
+
+Your Command: go to garbagecan 1
+
+Observation: You arrive at garbagecan 1. On the garbagecan 1, you see nothing.
+
+LLM Think: I am at the garbagecan. I can now place the cooled apple here to complete the task.
+
+Your Command: move apple 1 to garbagecan 1
+
+You won!

@@ -1,0 +1,55 @@
+-= Welcome to TextWorld, ALFRED! =-
+
+You are in the middle of a room. Looking quickly around you, you see a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+
+Your task is to: put a hot tomato in fridge.
+
+LLM Think: Since I have to put a hot tomato in fridge, I need to first find the tomato, then heat it and then putting it in the fridge. So firstly, I need to find a tomato, I can see multiple objects and locations in the current scene. I need to see most likely location of tomato, and for that, I need to use my internal knowledge for candidate locations. I can start exploring from fridge. 
+
+Your command: go to fridge 1
+
+Observation: You arrive at fridge 1. The fridge 1 is closed.
+
+LLM Think: Although I have arrived at fridge 1, but the fridge is currently closed, I need to open it to see what is inside.
+
+Your command: open fridge 1
+
+Observation: You open the fridge 1. In it, you see bread 2 and tomato 2.
+
+LLM Think: O yess, I found a tomato in the fridge. I will now quickly take it so I can heat it.
+
+Your command: take tomato 2 from fridge 1
+
+Observation: You pick up the tomato 2 from the fridge 1.
+
+LLM Think: I have now picked up the tomato. As the next task, I need to heat this tomato. Although I can see multiple objects and receptacles in the scene objects that can potentially heat the objects, I can see that microwave is also there, so I will quickly go to the microwave and heat this tomato.
+
+Your command: go to microwave 1
+
+Observation: You arrive at microwave 1. The microwave 1 is closed.
+
+LLM Think: Although I am facing the microwave, but I see it is currently closed, so I need to open it first.
+
+Your command: open microwave 1
+
+Observation: You open the microwave 1. In microwave, you see nothing.
+
+LLM Think: I have now opened the microwave, I can now directly run the heat command to heat the tomato.
+
+Your command: heat tomato 2 with microwave 1
+
+Observation: You heat the tomato 2 using the microwave 1.
+
+LLM Think: O yess, I now have the hot tomato with me. To accomplish my goal, I need to place this tomato in the fridge, and for that, I will quickly go to the fridge. 
+
+Your command: go to fridge 1
+
+Observation: You arrive at fridge 1. The fridge 1 is open.
+
+LLM Think: I have arrived at fridge 1 and it is currently open. I can now simply move the tomato to the fridge to complete my goal. 
+
+Your command: move tomato 2 to fridge 1
+
+Observation: You move the tomato 2 to the fridge 1.
+
+You Won!

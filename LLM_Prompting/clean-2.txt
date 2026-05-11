@@ -1,0 +1,90 @@
+-= Welcome to TextWorld, ALFRED! =-
+You are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 2, a handtowelholder 1, a shelf 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, a towelholder 2, and a towelholder 1.
+Your task is to: clean some cloth and put it in bathtubbasin.
+
+LLM Think: In order to clean some cloth and put it in bathtubbasin, I need to first find the cloth. I can see multiple objects and locations in the current scene. I need to find the most likely location of cloth, and for that, I need to search 'cloth' on ConceptNet. I will use ConceptRelate('cloth','AtLocation') to find the candidate location of 'cloth'.
+
+Edges
+(20): ['arts and craft store', 'bathroom', 'bedroom', 'bolt', 'bothroom', 'closet', 'clothes', 'clothes factory', 'clothing processing plant', 'clothing store', 'egyptian tombs', 'fabric store', 'kitchen', 'linen closet', 'linen cupboard', 'linen store', "old man's pocket", 'store', 'table', 'yards goods store']
+LLM Think: I have retrieved data from ConceptNet, and since I am finding an object, it means the most relevant relation will be 'AtLocation', so I will now try to map the data from this relation with scene objects. By looking at this, I can see 'bathroom' and 'closet' are present in the current scene as: cabinet 1, cabinet 2, cabinet 3, cabinet 4, and towelholder 1, towelholder 2, handtowelholder 1, handtowelholder 2. So I would suggest to first explore these locations one by one, and will then see what happens. I will start with cabinet 1.
+Your command: go to cabinet 1
+Observation:
+You arrive at cabinet 1. The cabinet 1 is closed.
+
+LLM Think: Oh I see this is closed, in order to see what's inside, I need to first open it.
+Your command: open cabinet 1
+
+Observation:
+You open the cabinet 1. The cabinet 1 is open. In it, you see a handtowel 1, and a bottle 2.
+
+LLM Think: Although I can see a handtowel here that is similar to cloth, but I am not allowed to consider the similar candidates. So I will keep searching untill I find a cloth. 
+Your command: go to cabinet 2
+
+Observation:
+You arrive at cabinet 2. The cabinet 2 is closed.
+
+LLM Think: Oh I see this is closed, in order to see what's inside, I need to first open it. This is similar to what I did with cabinet 1, so I will open cabinet 2 to explore its contents.
+Your command: open cabinet 2
+
+Observation:
+You open the cabinet 2. The cabinet 2 is open. In it, you see a soapbottle 2.
+
+LLM Think: Although I can see a soapbottle here, but this is not the target object, so I need to explore the other locations now. Since I have already explored cabinet 1 and cabinet 2, my next location to explore would be cabinet 3, to see if I can find the cloth there.
+Your command: go to cabinet 3
+
+Observation:
+You arrive at cabinet 3. The cabinet 3 is closed.
+
+LLM Think: Oh I see this is closed, in order to see what's inside, I need to first open it. 
+Your command: open cabinet 3
+
+Observation:
+You open the cabinet 3. The cabinet 3 is open. In it, you see a toiletpaper 2.
+
+LLM Think: Although I can see a toiletpaper here, but this is not the target object, so I need to explore the other locations now. Since I have already explored cabinet 1, cabinet 2, and cabinet 3, my next location to explore would be cabinet 4, to see if I can find the cloth there. 
+Your command: go to cabinet 4
+
+Observation:
+You arrive at cabinet 4. The cabinet 4 is closed.
+
+LLM Think: Oh I see this is closed, in order to see what's inside, so I will open cabinet 4 to explore its contents.
+Your command: open cabinet 4
+
+Observation:
+You open the cabinet 4. The cabinet 4 is open. In it, you see handtowel 1, handtowel 2, cloth 1, and box2.
+
+LLM Think: I have opened cabinet 4 and found cloth. So I would take cloth 1
+Your command: take cloth 1 from cabinet 4
+
+Observation:
+You take cloth 1 from cabinet 4.
+
+LLM Think: I have now picked the cloth, and my next goal is to clean it. I am not sure which receptacles are used for cleaning. I will use conceptnet for this information. 
+LLM Think: I got the knife with me, now i need to clean it. For that, i dont know what scene receptacles will be used to clean this. So i need to query ConceptNet for the knowledge.
+For using conceptNet, I have 2 functions to use. ConceptSearch would be used when I need more information, ConceptRelate would be used when I need to search ConceptNet for a particular relation. For this case, I do not need to search all the information, but only a few relations that could be used to find the candidate receptacle that can be used to 'clean' this apple, so i would use ConceptRelate(['clean', 'IsA'], ['clean','UsedFor'], ['clean', 'HasProperty'])
+
+ConceptNet: 'clean', 'IsA': 
+Fetching ConceptNet data for concept: '' ...
+🔹 Relation: IsA
+Edges (0): ['cleaning tool', 'n', 'semiconductor processing tool chamber', 'scrubber', 'dry clean', 'tangible thing', 'sink', 'programming language']
+🔹 Relation: CapableOf
+['hand sanitizer']
+🔹 Relation: UsedFor
+['cloth', 'a soap', 'a vent brush', 'soaps'],
+🔹 Relation: HasProperty: ['a glass', 'you hope it', 'not all appartments', 'carpets that have been vacuumed',   'the chalk board', 'if you wash your hands they',  'a hospital', 'first class seating areas'],
+
+LLM Think: I have retrieved these relations, and by looking at the data edges, I will try to map this with the scene objects. Although a soap, cloth are used to clean, but when I check the direct receptacles in the current scene, I see a data edge 'sink'. If i try to map it with scene objects, I can see we have a receptacle: sinkbasin 1, and these two are similar,also, there is no other receptacle in the scene that could be used for cleaning, so i am going with this. So now i first need to goto sinkbasin so that i can clean with it.
+
+Your command: go to sinkbasin 1
+
+Observation:
+You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.
+
+LLM Think: I have arrived at sinkbasin 1 and I see nothing on it. I can use the sinkbasin 1 to clean the cloth 1. I will clean the handtowel 1 with sinkbasin 1.
+Your command: clean cloth 1 with sinkbasin 1
+
+Observation:
+You clean cloth 1 with sinkbasin 1.
+
+You Won!
+

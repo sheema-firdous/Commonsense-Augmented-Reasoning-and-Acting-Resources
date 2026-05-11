@@ -1,0 +1,111 @@
+= Welcome to TextWorld, ALFRED! =-
+
+You are in the middle of a room. Looking quickly around you, you see a bed 1, a desk 1, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a dresser 1, and a garbagecan 1.
+
+Your task is to: look at cd under the desklamp.
+
+LLM Think: In order to look at the cd under the desklamp, I need to first search for the cd. I can see multiple objects and locations in the current scene. I need to see the most likely location of the cd, and for that, I need to use my internal knowledge for this cd tostart exploring.
+
+Your command: go to dresser 1
+
+Observation: 
+You arrive at dresser 1. On the dresser 1, you see a pen 2, and a pencil 2.
+
+LLM Think: I have arrived at dresser 1, but I did not find the cd. Instead, I found a pen 2 and a pencil 2. Since my goal is to look at the cd under the desklamp, I need to continue searching for the cd. According to the ConceptNet relation data, another possible location for the cd could be the drawers. I will now explore the drawers one after the other until I find the cd. I will start with drawer 1.
+
+Your command: go to drawer 1
+
+Observation: 
+You arrive at drawer 1. The drawer 1 is closed.
+
+LLM Think: I have arrived at drawer 1, but it is closed. To search for the cd inside the drawer, I need to open it first. I will open the drawer 1 to see if the cd is inside.
+
+Your command: open drawer 1
+
+Observation: 
+You open the drawer 1. The drawer 1 is open. In it, you see a creditcard 1, and a pen 1.
+
+LLM Think: I have opened the drawer 1, but I did not find the cd. Instead, I found a creditcard 1 and a pen 1. Since my goal is to look at the cd under the desklamp, I need to continue searching for the cd. According to the ConceptNet relation data, another possible location for the cd could be the other drawers. I will now explore the other drawers one after the other until I find the cd. I will move on to drawer 2.
+
+Your command: go to drawer 2
+
+Observation: 
+You arrive at drawer 2. The drawer 2 is closed.
+
+LLM Think: I have arrived at drawer 2, but it is closed. To search for the cd inside the drawer, I need to open it first. I will open the drawer 2 to see if the cd is inside.
+
+Your command: open drawer 2
+
+Observation: 
+You open the drawer 2. The drawer 2 is open. In it, you see nothing.
+
+LLM Think: I have opened the drawer 2, but it is empty. Since my goal is to look at the cd under the desklamp, I need to continue searching for the cd. According to the ConceptNet relation data, another possible location for the cd could be the other drawers. I will now explore the other drawers one after the other until I find the cd. I will move on to drawer 3.
+
+Your command: go to drawer 3
+
+Observation: 
+You arrive at drawer 3. The drawer 3 is closed.
+
+LLM Think: I have arrived at drawer 3, but it is closed. To search for the cd inside the drawer, I need to open it first. I will open the drawer 3 to see if the cd is inside.
+
+Your command: open drawer 3
+
+Observation: 
+You open the drawer 3. The drawer 3 is open. In it, you see a pen 3.
+
+LLM Think: I have opened the drawer 3, but I did not find the cd. Instead, I found a pen 3. Since my goal is to look at the cd under the desklamp, I need to continue searching for the cd. According to the ConceptNet relation data, another possible location for the cd could be the other drawers. I will now explore the other drawers one after the other until I find the cd. I will move on to drawer 4.
+
+Your command: go to drawer 4
+
+Observation: 
+You arrive at drawer 4. The drawer 4 is closed.
+
+LLM Think: I have arrived at drawer 4, but it is closed. To search for the cd inside the drawer, I need to open it first. I will open the drawer 4 to see if the cd is inside.
+
+Your command: open drawer 4
+
+Observation: 
+You open the drawer 4. The drawer 4 is open. In it, you see a cellphone 1, a creditcard 3, and a creditcard 2.
+
+LLM Think: I have opened the drawer 4, but I did not find the cd. Instead, I found a cellphone 1, a creditcard 3, and a creditcard 2. Since my goal is to look at the cd under the desklamp, I need to continue searching for the cd. According to the ConceptNet relation data, another possible location for the cd could be the other drawers. I will now explore the other drawers one after the other until I find the cd. I will move on to drawer 5.
+
+Your command: go to drawer 5
+
+Observation: 
+You arrive at drawer 5. The drawer 5 is closed.
+
+LLM Think: I have arrived at drawer 5, but it is closed. To search for the cd inside the drawer, I need to open it first. I will open the drawer 5 to see if the cd is inside.
+
+Your command: open drawer 5
+
+Observation: 
+You open the drawer 5. The drawer 5 is open. In it, you see a cd 3, and a cd 2.
+
+LLM Think: I have opened the drawer 5 and found two cds, cd 2 and cd 3. Since my goal is to look at the cd under the desklamp, I need to take one of the cds and find the desklamp. I will start by taking one of the cds.
+
+Your command: take cd 2 from drawer 5
+
+Observation: 
+You pick up the cd 2 from the drawer 5.
+
+LLM Think: I have picked up the cd 2 from the drawer 5. Now, I need to find the desklamp to look at the cd under it. I have not seen a desklamp in the current scene or in any of the drawers I have opened so far. I will use ConceptNet to search for more information about the desklamp and its possible locations. I will use ConceptRelate to see if I can find any new locations to search for the desklamp. I will use ConceptRelate('desklamp', 'AtLocation') to see if I can find any new locations to search for the desklamp.
+
+Your command: ConceptRelate('desklamp', 'AtLocation')
+Edges
+(1): ['desk']
+
+LLM Think: I have retrieved the ConceptNet relation data to find the location of 'desklamp'. By mapping the data edges with the scene objects, I can see that 'desklamp' can be mapped to locations such as a 'desk'. Since I see a desk 1 in the initial scene, I will go to the desk 1 to see if the desklamp is there.
+
+Your command: go to desk 1
+
+Observation: 
+You arrive at desk 1. On the desk 1, you see a alarmclock 1, a book 1, a desklamp 1, a keychain 1, and a pencil 3.
+
+LLM Think: I have arrived at desk 1 and I see a desklamp 1, which is the object I was searching for. Now that I have found the desklamp, I need to look at the cd under it. I am already holding the cd 2. I will use the desklamp 1 to shine light on the cd 2.
+
+Your command: use desklamp 1
+
+Observation: 
+You turn on the desklamp 1.
+
+You Won!

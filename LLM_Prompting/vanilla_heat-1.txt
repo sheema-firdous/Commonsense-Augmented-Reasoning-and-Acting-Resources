@@ -1,0 +1,95 @@
+-= Welcome to TextWorld, ALFRED! =-
+
+You are in the middle of a room. Looking quickly around you, you see a cabinet 11, a cabinet 10, a cabinet 9, a cabinet 8, a cabinet 7, a cabinet 6, a cabinet 5, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a coffeemachine 1, a countertop 2, a countertop 1, a diningtable 1, a drawer 3, a drawer 2, a drawer 1, a fridge 1, a garbagecan 1, a microwave 1, a sinkbasin 1, a stoveburner 4, a stoveburner 3, a stoveburner 2, a stoveburner 1, and a toaster 1.
+
+Your task is to: put a hot slice of tomato in sinkbasin.
+
+LLM Think: In order to put a hot slice of tomato in sinkbasin, i need to first search for the tomato, then slice it then heat it and finally to putting in the sinkbasin. I can see multiple objects and locations in the current scene. I need to see most likely location of tomato, and for that, I need to use my internal knowledge for candidate locations. 
+
+Your command: go to fridge 1
+
+Observation: You arrive at fridge 1. The fridge 1 is closed.
+
+LLM Think: The fridge is currently closed, to see what is inside, i need to quickly open it.
+
+Your command: open fridge 1
+
+Observation: You open the fridge 1. The fridge 1 is open. In it, you see a apple 3, a bowl 3, a lettuce 3, and a potato 1.
+
+LLM Think: I have opened the fridge but I can not see the tomato here. So now, I would explore the other locations to find the tomato. I see some receptacles that can potentially hold the tomatoes, for example, diningtable, so I would first explore this before the other receptacles.
+
+Your command: go to diningtable 1
+
+Observation: You arrive at diningtable 1. On the diningtable 1, you see a bread 1, a cup 1, a dishsponge 3, a fork 3, a fork 2, a lettuce 2, a soapbottle 2, and a tomato 3.
+
+LLM Think: Yess, I have found a tomato here. I will now pick this up.
+
+Your command: take tomato 3 from diningtable 1
+
+Observation: You pick up the tomato 3 from the diningtable 1.
+
+LLM Think: I have grabbed the tomato. Now I need to slice it as the next step. And for that, I need to look for an object that is capable of slicing it. So i will first explore the countertops, and will see what objects or tools I can find there.
+
+Your command: go to countertop 1
+
+Observation: You arrive at countertop 1. On the countertop 1, you see a butterknife 2, a egg 1, a fork 1, a lettuce 1, a pan 1, a plate 1, a saltshaker 2, a spoon 1, a tomato 2, and a tomato 1.
+
+LLM Think: Here I can see a butterknife that can potentially slice this tomato. So I will now use this butterknife to slice this tomato. But to do that, I need to first move the tomato I am currently holding since I can only hold one object at a time.
+
+Your command: move tomato 3 to countertop 1
+
+Observation: You move the tomato 3 to the countertop 1.
+
+LLM Think: I have moved the tomato to the countertop, and I can now quickly pick up the butterknife. 
+
+Your command: take butterknife 2 from countertop 1
+
+Observation: You pick up the butterknife 2 from the countertop 1.
+
+LLM Think: Now I have butterknife with me, and I will use this to slice the tomato.
+
+Your command: slice tomato 3 with butterknife 2
+
+Observation: You sliced the tomato 3 with the butterknife 2.
+
+LLM Think: Since I have sliced the tomato, I need to pick this up, and for that I need to move back the butterknife I am currently holding so that I can pick up the sliced tomato.
+
+Your command: move butterknife 2 to countertop 1
+
+Observation: You move the butterknife 2 to the countertop 1.
+
+LLM Think: Now I will quickly take the tomato.
+
+Your command: take tomato 3 from countertop 1
+
+Observation: You pick up the tomato 3 from the countertop 1.
+
+LLM Think: I have sliced tomato with me. The next sub goal is to heat this. And for that, I need to use a receptacle that is capable to heat this up. I can see a microwave in the current scene that can be used for this, so I will quickly go to the microwave to see if it can heat this tomato.
+
+Your command: go to microwave 1
+
+Observation: You arrive at microwave 1. The microwave 1 is closed.
+
+LLM Think: Since the microwave is currently closed, I need to first open this so that I can use it.
+
+Your command: open microwave 1
+
+Observation: You open the microwave 1. The microwave 1 is open. In it, you see a apple 1.
+
+LLM Think: I have microwave opened, I will directly use it to heat the tomato.
+
+Your command: heat tomato 3 with microwave 1
+
+Observation: You heat the tomato 3 using the microwave 1.
+
+LLM Think: Perfect, I have now hot sliced tomato with me. Now I will go for the very last task that was putitng this hot sliced tomato to the sink basin. So I will now head to the sinkbasin.
+
+Your command: go to sinkbasin 1
+
+Observation: You arrive at sinkbasin 1. On the sinkbasin 1, you see a apple 2, and a knife 3.
+
+LLM Think: I am facing the sinkbasin now, I will move the tomato to complete my task.
+
+Your command: move tomato 3 to sinkbasin 1
+
+You Won!
